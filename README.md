@@ -25,6 +25,26 @@ Try it live [here](https://awokadev.github.io/todo-list/)
 
 ## How to Run
 
-Clone the repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/AwokaDev/todo-list.git
+   ```
+2. Open `index.html` in your browser.
+3. Start adding your tasks!
+
+## Code Highlights
+
+**State Management logic:**
+The app automatically initializes the state from storage or creates a fresh start.
+```javascript
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+```
+
+**Deleting with Filter:**
+Instead of loops, I used the modern `.filter()` method to remove tasks from the state cleanly.
+```javascript
+tasks = tasks.filter((t) => t !== event.target.textContent);
+```
+
+## License
+This project is licensed under the MIT License.
